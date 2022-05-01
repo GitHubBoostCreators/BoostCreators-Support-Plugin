@@ -1,0 +1,13 @@
+{
+  "name": "weprovide/we-provide-care-package",
+  "type": "wordpress-plugin",
+  "description": "We/Provide care package",
+  "keywords": ["WordPress"],
+  "homepage": "https://www.weprovide.com",
+  "authors": [
+    {
+      "name": "Tim Neutkens",
+      "homepage": "https://www.weprovide.com/"
+    }
+  ]
+}
