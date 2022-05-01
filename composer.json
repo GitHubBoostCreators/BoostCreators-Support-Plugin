@@ -1,13 +1,13 @@
 {
-  "name": "weprovide/we-provide-care-package",
+  "name": "boostcreators/boost-creators-support",
   "type": "wordpress-plugin",
-  "description": "We/Provide care package",
+  "description": "Boost Creators Support Plugin",
   "keywords": ["WordPress"],
-  "homepage": "https://www.weprovide.com",
+  "homepage": "https://www.boostcreators.nl",
   "authors": [
     {
-      "name": "Tim Neutkens",
-      "homepage": "https://www.weprovide.com/"
+      "name": "Boost Creators",
+      "homepage": "https://www.boostcreators.nl/"
     }
   ]
 }

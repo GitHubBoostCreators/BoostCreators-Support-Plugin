@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: We/Provide care package
-Plugin URI: http://www.weprovide.com/
-Version: 1.0.4
-Author: Tim Neutkens
-Description: We/Provide standaard pakket
+Plugin Name: Boost Creators Support
+Plugin URI: https://www.boostcreators.nl/
+Version: 1.0.1
+Author: Boost Creators
+Description: Boost Creators Support Plugin
 */
 
 
 /**
  * Add role on plugin activation
  */
-function we_provide_add_roles_on_plugin_activation() {
+function bc_add_roles_on_plugin_activation() {
 	$args = array(
 		'activate_plugins'                          => false,
 		'add_users'                                 => false,
@@ -82,29 +82,29 @@ function we_provide_add_roles_on_plugin_activation() {
 		'wpml_operate_woocommerce_multilingual'     => false,
 		'wpseo_bulk_edit'                           => false,
 	);
-	add_role( 'we_provide_user', __( 'We Provide User' ), $args );
+	add_role( 'bc_user', __( 'Boost Creators User' ), $args );
 
-	// Set We Provide dark theme for all users on activation
+	// Set Boost Creators dark theme for all users on activation
 	$users = get_users();
 	foreach ( $users as $user ) {
 		$args = array(
 			'ID'          => $user->ID,
-			'admin_color' => 'We Provide dark'
+			'admin_color' => 'Boost Creators dark'
 		);
 		wp_update_user( $args );
 	}
 }
 
-register_activation_hook( __FILE__, 'we_provide_add_roles_on_plugin_activation' );
+register_activation_hook( __FILE__, 'bc_add_roles_on_plugin_activation' );
 
 
 /**
  * Require all partitials
  */
-require_once( 'color-schemes/we-provide-color-schemes.php' );
-require_once( 'login/we-provide-login.php' );
-require_once( 'dashboard/we-provide-dashboard.php' );
-require_once( 'admin/we-provide-admin.php' );
-require_once( 'security/we-provide-security.php' );
-require_once( 'robots/we-provide-robots.php' );
+require_once( 'color-schemes/boost-creators-color-schemes.php' );
+require_once( 'login/boost-creators-login.php' );
+require_once( 'dashboard/boost-creators-dashboard.php' );
+require_once( 'admin/boost-creators-admin.php' );
+require_once( 'security/boost-creators-security.php' );
+require_once( 'robots/boost-creators-robots.php' );
 

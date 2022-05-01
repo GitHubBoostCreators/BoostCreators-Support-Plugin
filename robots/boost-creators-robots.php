@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Change "Thanks for using WordPress" to We/Provide text
+ * Change "Thanks for using WordPress" to Boost Creators text
  * @return String   The string is displayed at the bottom of the WordPress backend
  */
 
