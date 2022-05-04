@@ -4,33 +4,54 @@
  * Change login logo and styles
  * @return Null    Returns null
  */
-function we_provide_login_styles() {
+function bc_login_styles() {
 
 ?>
 
-  <style type="text/css">
-    body.login div#login h1 a {
-      background-image: url(<?php echo plugins_url( 'images/logo.png', __FILE__ ); ?>);
-    }
-    .forgetmenot {
-      float:none !important;
-    }
-  </style>
+<style type="text/css">
+#login h1 a,
+.login h1 a {
+    background-image: url(<?php echo plugins_url('images/site-login-logo.svg', __FILE__);?>);
+    height: 65px;
+    width: 320px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+
+body.login {
+    background-image: url(<?php echo plugins_url('images/pattern.png', __FILE__);?>) !important;
+    background-repeat: repeat;
+}
+</style>
+
 
 <?php
-  wp_enqueue_style( 'we-provide-login', plugins_url( 'css/we-provide-login.css', __FILE__ ) );
+  wp_enqueue_style( 'boost-creators-login', plugins_url( 'css/style.css', __FILE__ ) );
 }
 
-add_action( 'login_enqueue_scripts', 'we_provide_login_styles' );
+add_action( 'login_enqueue_scripts', 'bc_login_styles' );
 
 /**
- * Change the logo url to weprovide.nl
+ * Change the logo url to boostcreators.nl
  * @return String   The url
  */
-function we_provide_url() {
-    return 'https://www.weprovide.com/';
+function bc_url() {
+    return 'https://www.boostcreators.nl/';
 }
 
-add_filter( 'login_headerurl', 'we_provide_url' );
+add_filter( 'login_headerurl', 'bc_url' );
+
+
+/**
+ * Change the logo title to boostcreators.nl
+ * @return String   The url
+ */
+
+function my_login_logo_url_title() {
+  return 'Mogelijk gemaakt door Boostcreators';
+}
+add_filter( 'login_headertext', 'my_login_logo_url_title' );
+
 
 ?>
