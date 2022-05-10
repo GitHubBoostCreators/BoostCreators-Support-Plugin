@@ -2,7 +2,7 @@
 /*
 Plugin Name: Boost Creators Support
 Plugin URI: https://github.com/GitHubBoostCreators/BoostCreators-Support-Plugin
-Version: 1.0.4
+Version: 1.0.5
 Author: Boost Creators
 Description: Boost Creators Support Plugin
 */
