@@ -2,7 +2,7 @@
 /*
 Plugin Name: Boost Creators Support
 Plugin URI: https://www.boostcreators.nl/
-Version: 1.0.1
+Version: 1.0.2
 Author: Boost Creators
 Description: Boost Creators Support Plugin
 */
@@ -108,3 +108,15 @@ require_once( 'admin/boost-creators-admin.php' );
 require_once( 'security/boost-creators-security.php' );
 require_once( 'robots/boost-creators-robots.php' );
 
+
+if( ! class_exists( 'BC_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+
+$updater = new BC_Updater( __FILE__ );
+$updater->set_username( 'rayman813' );
+$updater->set_repository( 'smashing-updater-plugin' );
+/*
+	$updater->authorize( 'abcdefghijk1234567890' ); // Your auth code goes here for private repos
+*/
+$updater->initialize();
