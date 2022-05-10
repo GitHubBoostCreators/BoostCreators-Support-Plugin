@@ -2,7 +2,7 @@
 /*
 Plugin Name: Boost Creators Support
 Plugin URI: https://github.com/GitHubBoostCreators/BoostCreators-Support-Plugin
-Version: 1.0.5
+Version: 1.0.6
 Author: Boost Creators
 Description: Boost Creators Support Plugin
 */
@@ -114,7 +114,7 @@ register_activation_hook( __FILE__, 'bc_add_roles_on_plugin_activation' );
 /**
  * Require all partitials
  */
-require_once( 'color-schemes/boost-creators-color-schemes.php' );
+// require_once( 'color-schemes/boost-creators-color-schemes.php' );
 require_once( 'login/boost-creators-login.php' );
 require_once( 'dashboard/boost-creators-dashboard.php' );
 require_once( 'admin/boost-creators-admin.php' );
