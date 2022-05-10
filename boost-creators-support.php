@@ -2,7 +2,7 @@
 /*
 Plugin Name: Boost Creators Support
 Plugin URI: https://www.boostcreators.nl/
-Version: 1.0.2
+Version: 1.0.3
 Author: Boost Creators
 Description: Boost Creators Support Plugin
 */
@@ -113,9 +113,10 @@ if( ! class_exists( 'BC_Updater' ) ){
 	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
 }
 
+// Explain updater https://www.smashingmagazine.com/2015/08/deploy-wordpress-plugins-with-github-using-transients/
 $updater = new BC_Updater( __FILE__ );
-$updater->set_username( 'rayman813' );
-$updater->set_repository( 'smashing-updater-plugin' );
+$updater->set_username( 'GitHubBoostCreators' );
+$updater->set_repository( 'BoostCreators-Support-Plugin' );
 /*
 	$updater->authorize( 'abcdefghijk1234567890' ); // Your auth code goes here for private repos
 */
